@@ -5,160 +5,200 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vikram Jalan</title>
 
-<!-- Facebook Pixel Code -->
+<!-- Facebook Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];
+t=b.createElement(e);t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '2098535434257063');
+fbq('init', '726948156914983'); 
 fbq('track', 'PageView');
 </script>
 
-<noscript>
-<img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2098535434257063&ev=PageView&noscript=1"/>
-</noscript>
-<!-- End Facebook Pixel Code -->
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(-45deg, #000000, #1a1a1a, #000000, #111);
+    background-size: 400% 400%;
+    animation: bgMove 10s infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
-body{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background: linear-gradient(180deg,#ff2a7f,#c0005a);
+@keyframes bgMove {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
-.card{
-    width:90%;
-    max-width:400px;
-    background: linear-gradient(180deg,#7a003f,#4a0027);
-    padding:40px 20px;
-    border-radius:30px;
-    text-align:center;
-    box-shadow:0 20px 40px rgba(0,0,0,0.3);
+.container {
+    width: 90%;
+    max-width: 400px;
+    padding: 25px;
+    border-radius: 25px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 40px rgba(255,215,0,0.2);
+    animation: float 3s ease-in-out infinite;
 }
 
-.title{
-    font-size:32px;
-    font-weight:bold;
-    letter-spacing:4px;
-    color:#00e5ff;
+@keyframes float {
+    0%,100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
 }
 
-.subtitle{
-    margin-top:10px;
-    color:#ddd;
-    font-size:18px;
+.badge {
+    background: linear-gradient(45deg, gold, orange);
+    color: black;
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px gold;
 }
 
-.timer{
-    font-size:80px;
-    color:#ffc400;
-    font-weight:bold;
-    margin:20px 0 10px;
+h1 {
+    font-size: 28px;
+    margin: 10px 0;
 }
 
-.seconds-text{
-    color:#eee;
-    font-size:22px;
-    margin-bottom:25px;
+.subtitle {
+    font-size: 14px;
+    color: #ddd;
 }
 
-.join-btn{
-    display:inline-block;
-    padding:18px 30px;
-    border-radius:50px;
-    background: linear-gradient(90deg,#00e5ff,#5b9dff);
-    color:#000;
-    font-weight:bold;
-    text-decoration:none;
-    font-size:18px;
-    transition:0.3s;
+.highlight {
+    margin: 15px 0;
+    padding: 10px;
+    border-radius: 10px;
+    color: #ff4d4d;
+    border: 1px solid red;
+    background: rgba(255,0,0,0.05);
 }
 
-.join-btn:hover{
-    transform:scale(1.05);
-    box-shadow:0 0 20px #00e5ff;
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
 }
 
-.stay-text{
-    margin-top:25px;
-    color:#ddd;
-    font-size:16px;
+.stat-box {
+    width: 30%;
+    padding: 12px;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
-.ads-box{
-    margin-top:25px;
-    padding:12px;
-    border-radius:15px;
-    background:#5a0032;
-    font-size:16px;
-    text-align:center;
+.stat-box h2 {
+    color: gold;
+    margin: 0;
 }
 
-.ads-box a{
-    color:#00e5ff;
-    font-weight:bold;
-    text-decoration:none;
+.stat-box p {
+    font-size: 11px;
+    color: #bbb;
 }
 
-.ads-box a:hover{
-    text-decoration:underline;
+/* ✅ ZOOM OUT BUTTON */
+.btn {
+    display: block;
+    margin: 20px auto 0;
+    padding: 14px;              /* size reduced */
+    width: 80%;                /* smaller width */
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;           /* smaller text */
+    color: black;
+    background: linear-gradient(45deg, gold, orange);
+    box-shadow: 0 0 15px gold;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+/* Shine */
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
+    transition: 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:hover {
+    transform: scale(0.9); /* zoom out on hover */
+}
+
+.footer {
+    margin-top: 15px;
+    font-size: 11px;
+    color: #aaa;
 }
 </style>
 </head>
 
 <body>
 
-<div class="card">
-    <div class="title">VIKRAM JALAN</div>
-    <div class="subtitle">Official Telegram Channel</div>
+<div class="container">
 
-    <div class="timer" id="countdown">10</div>
-    <div class="seconds-text">Seconds Left</div>
+    <div class="badge">🏆 BIGGEST IN THE WORLD</div>
 
-    <a href="https://t.me/+B84Y1PQZEtFkZjY1" target="_blank" class="join-btn">
-        JOIN TELEGRAM CHANNEL
+    <h1>VIKRAM JALAN ✔</h1>
+
+    <div class="subtitle">
+        The Only <span style="color:gold;">God Level</span> Tipper in Telegram History
+    </div>
+
+    <div class="highlight">
+        IPL 2024-25 JACKPOT KING 🎯
+    </div>
+
+    <div class="stats">
+        <div class="stat-box">
+            <h2>40K+</h2>
+            <p>SUBSCRIBERS</p>
+        </div>
+        <div class="stat-box">
+            <h2>99%</h2>
+            <p>ACCURACY</p>
+        </div>
+        <div class="stat-box">
+            <h2>FREE</h2>
+            <p>REPORTS</p>
+        </div>
+    </div><a href="https://t.me/+B84Y1PQZEtFkZjY1" class="btn" target="_blank">
+        JOIN CHANNEL FREE
     </a>
 
-    <div class="stay-text">
-        Stay connected with VIKRAM JALAN
+    <div class="footer">
+        ⚠️ BEWARE OF FAKE CHANNELS · OFFICIAL LINK
     </div>
 
-    <div class="ads-box">
-        <a href="https://t.me/+_ldYCcyc-qwwODU1" target="_blank">
-            Ads By Ck Ads Agancy
-        </a>
-    </div>
 </div>
-
-<script>
-let timeLeft = 10;
-const countdown = document.getElementById("countdown");
-
-const timer = setInterval(() => {
-    if(timeLeft > 0){
-        timeLeft--;
-        countdown.innerText = timeLeft;
-    } else {
-        clearInterval(timer);
-    }
-}, 1000);
-</script>
 
 </body>
 </html>
