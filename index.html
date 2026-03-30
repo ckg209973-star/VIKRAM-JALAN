@@ -5,197 +5,133 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vikram Jalan</title>
 
-<!-- Facebook Pixel -->
+<!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];
-t=b.createElement(e);t.async=!0;
-t.src=v;
-s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}
-(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '726948156914983'); 
+fbq('init', '2098535434257063');
 fbq('track', 'PageView');
 </script>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2098535434257063&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
 
 <style>
 body {
     margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(-45deg, #000000, #1a1a1a, #000000, #111);
-    background-size: 400% 400%;
-    animation: bgMove 10s infinite;
-    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #cfd9df, #e2ebf0);
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    height: 100vh;
 }
 
-@keyframes bgMove {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-
-.container {
+/* Card */
+.card {
+    background: #fff;
     width: 90%;
-    max-width: 400px;
-    padding: 25px;
-    border-radius: 25px;
+    max-width: 380px;
+    padding: 30px 20px;
+    border-radius: 20px;
     text-align: center;
-    backdrop-filter: blur(15px);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 215, 0, 0.4);
-    box-shadow: 0 0 40px rgba(255,215,0,0.2);
-    animation: float 3s ease-in-out infinite;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
 }
 
-@keyframes float {
-    0%,100% {transform: translateY(0);}
-    50% {transform: translateY(-10px);}
+/* Title */
+.title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1d2630;
+    margin-bottom: 10px;
 }
 
-.badge {
-    background: linear-gradient(45deg, gold, orange);
-    color: black;
-    padding: 8px 20px;
-    border-radius: 30px;
-    font-weight: bold;
-    display: inline-block;
+/* Subscribers */
+.subs {
+    color: #6c7a89;
+    font-size: 16px;
     margin-bottom: 20px;
-    box-shadow: 0 0 15px gold;
 }
 
-h1 {
-    font-size: 28px;
-    margin: 10px 0;
+/* Description */
+.desc {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 15px;
 }
 
-.subtitle {
+/* Telegram hint */
+.telegram {
+    color: #6fa3ff;
     font-size: 14px;
-    color: #ddd;
+    margin-bottom: 25px;
 }
 
-.highlight {
-    margin: 15px 0;
-    padding: 10px;
-    border-radius: 10px;
-    color: #ff4d4d;
-    border: 1px solid red;
-    background: rgba(255,0,0,0.05);
-}
-
-.stats {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 0;
-}
-
-.stat-box {
-    width: 30%;
-    padding: 12px;
-    border-radius: 12px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-.stat-box h2 {
-    color: gold;
-    margin: 0;
-}
-
-.stat-box p {
-    font-size: 11px;
-    color: #bbb;
-}
-
-/* ✅ ZOOM OUT BUTTON */
+/* Button */
 .btn {
-    display: block;
-    margin: 20px auto 0;
-    padding: 14px;              /* size reduced */
-    width: 80%;                /* smaller width */
-    border-radius: 10px;
-    text-decoration: none;
+    display: inline-block;
+    padding: 16px 25px;
+    background: linear-gradient(135deg, #2fa4d7, #1e88e5);
+    color: #fff;
+    font-size: 18px;
     font-weight: bold;
-    font-size: 16px;           /* smaller text */
-    color: black;
-    background: linear-gradient(45deg, gold, orange);
-    box-shadow: 0 0 15px gold;
-    position: relative;
-    overflow: hidden;
-    transition: 0.3s;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: 0.2s ease;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-/* Shine */
-.btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(120deg, transparent, rgba(255,255,255,0.6), transparent);
-    transition: 0.5s;
-}
-
-.btn:hover::before {
-    left: 100%;
-}
-
+/* Hover */
 .btn:hover {
-    transform: scale(0.9); /* zoom out on hover */
+    transform: scale(0.97);
 }
 
+/* Click zoom-out */
+.btn:active {
+    transform: scale(0.90);
+}
+
+/* Footer */
 .footer {
-    margin-top: 15px;
-    font-size: 11px;
-    color: #aaa;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
-
-    <div class="badge">🏆 BIGGEST IN THE WORLD</div>
-
-    <h1>VIKRAM JALAN ✔</h1>
-
-    <div class="subtitle">
-        The Only <span style="color:gold;">God Level</span> Tipper in Telegram History
+<div class="card">
+    
+    <div class="title">VIKRAM JALAN</div>
+    
+    <div class="subs">78,127 Subscribers</div>
+    
+    <div class="desc">
+        Join now for exclusive insights and daily tips.
     </div>
-
-    <div class="highlight">
-        IPL 2024-25 JACKPOT KING 🎯
+    
+    <div class="telegram">
+        Tap button to view in Telegram
     </div>
-
-    <div class="stats">
-        <div class="stat-box">
-            <h2>40K+</h2>
-            <p>SUBSCRIBERS</p>
-        </div>
-        <div class="stat-box">
-            <h2>99%</h2>
-            <p>ACCURACY</p>
-        </div>
-        <div class="stat-box">
-            <h2>FREE</h2>
-            <p>REPORTS</p>
-        </div>
-    </div><a href="https://t.me/+B84Y1PQZEtFkZjY1" class="btn" target="_blank">
-        JOIN CHANNEL FREE
-    </a>
-
+    
+    <a href="https://t.me/+B84Y1PQZEtFkZjY1" class="btn">JOIN CHANNEL</a>
+    
     <div class="footer">
-        ⚠️ BEWARE OF FAKE CHANNELS · OFFICIAL LINK
+        If you have Telegram, you can view and join this channel right away.<br><br>
+        Privacy • Terms
     </div>
 
 </div>
